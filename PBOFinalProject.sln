@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32819.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBOFinalProject", "PBOFinalProject\PBOFinalProject.csproj", "{70BA1B2D-09CC-4490-AFC4-566AD17E1FBB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "..\PlanningApp\API\API.csproj", "{6CC5F3E1-8AE7-47A2-877E-C991E5CEF7F5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{6CC5F3E1-8AE7-47A2-877E-C991E5CEF7F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBOFinalProjectTest", "PBOFinalProjectTest\PBOFinalProjectTest.csproj", "{97945F79-EFD1-43E1-9977-78D5CB23C67A}"
 EndProject
