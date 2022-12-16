@@ -31,7 +31,7 @@ namespace PBOFinalProject
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -44,11 +44,12 @@ namespace PBOFinalProject
             Add newForm = new Add();
             newForm.Show();
             this.Hide();
+            
         }
 
         private void ActivityListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+           
         }
     }
 }

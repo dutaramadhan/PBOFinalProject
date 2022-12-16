@@ -1,4 +1,6 @@
-﻿namespace PBOFinalProject
+﻿using System.Windows.Forms;
+
+namespace PBOFinalProject
 {
     partial class LoginPage
     {
@@ -33,7 +35,7 @@
             this.NameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.EmailBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.loginButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.PasswordBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -88,17 +90,17 @@
             this.EmailBox.TabIndex = 4;
             this.EmailBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // button1
+            // loginButton
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(317, 344);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 49);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Masuk";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.loginButton.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.loginButton.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loginButton.Location = new System.Drawing.Point(317, 344);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(145, 49);
+            this.loginButton.TabIndex = 7;
+            this.loginButton.Text = "Masuk";
+            this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -107,7 +109,7 @@
             this.label3.Location = new System.Drawing.Point(137, 253);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(184, 25);
-            this.label3.TabIndex = 6;
+            this.label3.TabIndex = 5;
             this.label3.Text = "Masukan Password";
             // 
             // PasswordBox
@@ -117,7 +119,7 @@
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.PasswordChar = '*';
             this.PasswordBox.Size = new System.Drawing.Size(523, 34);
-            this.PasswordBox.TabIndex = 7;
+            this.PasswordBox.TabIndex = 6;
             this.PasswordBox.UseSystemPasswordChar = true;
             // 
             // LoginPage
@@ -127,7 +129,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.PasswordBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.loginButton);
             this.Controls.Add(this.EmailBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NameBox);
@@ -147,9 +149,21 @@
         private System.Windows.Forms.TextBox NameBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox EmailBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox PasswordBox;
+
+        public LoginPage(Label welcome, Label label2, TextBox nameBox, Label label1, TextBox emailBox, Button loginButton, Label label3, TextBox passwordBox)
+        {
+            Welcome = welcome;
+            this.label2 = label2;
+            NameBox = nameBox;
+            this.label1 = label1;
+            EmailBox = emailBox;
+            this.loginButton = loginButton;
+            this.label3 = label3;
+            PasswordBox = passwordBox;
+        }
     }
 }
 

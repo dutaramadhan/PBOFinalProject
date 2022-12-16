@@ -29,25 +29,61 @@ namespace PBOFinalProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (ActivityBox.Text == null || DateBox.Text == null || PlaceBox.Text == null)
+            if (ActivityBox.Text == null || dateBox.Value == null || timeBox.Value==null ||PlaceBox.Text == null || ActivityBox.Text == "" || PlaceBox.Text == "")
             {
-                MessageBox.Show("Tolong Isi Nama, Email, dan Password Terlebih Dahulu");
+                MessageBox.Show("Tolong Isi Nama, Tanggal, dan Tempat Kegiatan Terlebih Dahulu");
                 return;
+            }
+            else if (dateBox.Value == DateTime.Now || timeBox.Value < DateTime.Now)
+            {
+                MessageBox.Show("Masukan tanggal dan jam yang valid");
+            }
+            else if (dateBox.Value < DateTime.Now){
+                MessageBox.Show("Masukan tanggal yang valid");
             }
             else
             {
                 Task task = new Task();
                 task.Activity = ActivityBox.Text;
-                task.Date = DateBox.Text;
+                task.Date = dateBox.Value ;
                 task.Place = PlaceBox.Text;
                 MessageBox.Show("Data Berhasil Disimpan");
-                MainPage newForm = new MainPage();
-                newForm.Show();
+                MainPage mainPage = new MainPage();
+                mainPage.Show();
                 this.Hide();
             }
         }
 
         private void DateBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            MainPage mainPage = new MainPage();
+            mainPage.Show();
+            this.Hide();
+        }
+
+
+        private void dateBox_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void Add_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void timeBox_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

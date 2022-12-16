@@ -69,9 +69,9 @@
             // ActivityListBox
             // 
             this.ActivityListBox.FormattingEnabled = true;
-            this.ActivityListBox.Location = new System.Drawing.Point(309, 113);
+            this.ActivityListBox.Location = new System.Drawing.Point(193, 92);
             this.ActivityListBox.Name = "ActivityListBox";
-            this.ActivityListBox.Size = new System.Drawing.Size(195, 55);
+            this.ActivityListBox.Size = new System.Drawing.Size(434, 225);
             this.ActivityListBox.TabIndex = 4;
             this.ActivityListBox.SelectedIndexChanged += new System.EventHandler(this.ActivityListBox_SelectedIndexChanged);
             // 

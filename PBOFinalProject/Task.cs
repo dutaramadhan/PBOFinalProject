@@ -9,12 +9,14 @@ namespace PBOFinalProject
     internal class Task
     {
         private string activity;
-        private string date;
+        private DateTime date;
+        private DateTime time;
         private string place;
 
         public string Activity { get => activity; set => activity = value; }
-        public string Date { get => date; set => date = value; }
+        public DateTime Date { get => date; set => date = value; }
         public string Place { get => place; set => place = value; }
+        public DateTime Time { get => time; set => time = value; }
 
         public Task()
         {

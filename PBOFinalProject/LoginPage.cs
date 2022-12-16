@@ -39,7 +39,7 @@ namespace PBOFinalProject
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (NameBox.Text == null || EmailBox.Text == null || PasswordBox.Text==null)
+            if (NameBox.Text == null || EmailBox.Text == null || PasswordBox.Text==null || NameBox.Text == "" || EmailBox.Text == "" || PasswordBox.Text == "")
             {
                 MessageBox.Show("Tolong Isi Nama, Email, dan Password Terlebih Dahulu");
                 return;
