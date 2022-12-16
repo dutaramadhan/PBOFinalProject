@@ -1,17 +1,18 @@
-﻿namespace API.Models
+﻿using System.Diagnostics;
+
+namespace API.Models
 {
     public class Task
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Activity { get; set; } = string.Empty;
         public DateTime Date { get; set; }
-        public string Place { get; set; }
-        public Task(int id, string name, DateTime date, string place)
+        public string Place { get; set; } = string.Empty;
+        public DateTime Time { get; set; }
+
+        public Task()
         {
-            Id = id;
-            Name = name;
-            Date = date;
-            Place = place;
-        } 
+
+        }
     }
 }

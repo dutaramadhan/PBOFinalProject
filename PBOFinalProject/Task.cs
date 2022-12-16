@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PBOFinalProject
 {
-    internal class Task
+    public class Task
     {
         private string activity;
         private DateTime date;

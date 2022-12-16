@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBOFinalProject.UsingAPI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace PBOFinalProject
     {
         private LoginPage loginPage;
 
+        static TaskAPI taskAPI = new TaskAPI();
+
         public MainPage()
         {
             InitializeComponent();
@@ -24,6 +27,16 @@ namespace PBOFinalProject
             this.loginPage = loginPage;
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            List<Task> tasks = taskAPI.GetTasks();
+            foreach (Task task in tasks) 
+            {
+                TaskItem taskItem = new TaskItem(task);
+                ActivityListBox.Controls.Add(taskItem);
+            }
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -32,11 +45,6 @@ namespace PBOFinalProject
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void AddButton_Click(object sender, EventArgs e)
