@@ -64,6 +64,7 @@
             this.ActivityListBox.Name = "ActivityListBox";
             this.ActivityListBox.Size = new System.Drawing.Size(712, 210);
             this.ActivityListBox.TabIndex = 6;
+            this.ActivityListBox.Paint += new System.Windows.Forms.PaintEventHandler(this.ActivityListBox_Paint);
             // 
             // MainPage
             // 

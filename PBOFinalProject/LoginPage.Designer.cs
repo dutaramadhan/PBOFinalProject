@@ -137,6 +137,7 @@ namespace PBOFinalProject
             this.Controls.Add(this.Welcome);
             this.Name = "LoginPage";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

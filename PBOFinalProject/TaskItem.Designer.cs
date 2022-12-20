@@ -34,6 +34,7 @@
             this.timeText = new System.Windows.Forms.Label();
             this.editBtn = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
+            this.warningLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // activityText
@@ -75,6 +76,7 @@
             this.timeText.Size = new System.Drawing.Size(64, 25);
             this.timeText.TabIndex = 3;
             this.timeText.Text = "label1";
+            this.timeText.Click += new System.EventHandler(this.timeText_Click);
             // 
             // editBtn
             // 
@@ -82,7 +84,7 @@
             this.editBtn.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.editBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.editBtn.Location = new System.Drawing.Point(593, 6);
+            this.editBtn.Location = new System.Drawing.Point(631, 6);
             this.editBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.editBtn.Name = "editBtn";
             this.editBtn.Size = new System.Drawing.Size(70, 30);
@@ -98,7 +100,7 @@
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteBtn.Location = new System.Drawing.Point(668, 6);
+            this.deleteBtn.Location = new System.Drawing.Point(707, 6);
             this.deleteBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(36, 30);
@@ -107,11 +109,23 @@
             this.deleteBtn.UseVisualStyleBackColor = false;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
+            // warningLabel
+            // 
+            this.warningLabel.AutoSize = true;
+            this.warningLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.warningLabel.Location = new System.Drawing.Point(546, 9);
+            this.warningLabel.Name = "warningLabel";
+            this.warningLabel.Size = new System.Drawing.Size(64, 25);
+            this.warningLabel.TabIndex = 7;
+            this.warningLabel.Text = "label1";
+            this.warningLabel.Click += new System.EventHandler(this.warningLabel_Click);
+            // 
             // TaskItem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.warningLabel);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.editBtn);
             this.Controls.Add(this.timeText);
@@ -120,7 +134,7 @@
             this.Controls.Add(this.activityText);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TaskItem";
-            this.Size = new System.Drawing.Size(711, 38);
+            this.Size = new System.Drawing.Size(748, 38);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -134,5 +148,6 @@
         private System.Windows.Forms.Label timeText;
         private System.Windows.Forms.Button editBtn;
         private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.Label warningLabel;
     }
 }

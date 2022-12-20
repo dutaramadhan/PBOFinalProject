@@ -1,4 +1,5 @@
-﻿using PBOFinalProject.UsingAPI;
+﻿using MyToDoPackage;
+using PBOFinalProject.UsingAPI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace PBOFinalProject
         static TaskAPI taskAPI = new TaskAPI();
         MainPage mainPage;
         Task task;
+        TimeZoneInfo toDoTimeZone = TimeZoneInfo.CreateCustomTimeZone("Custom Time Zone", new TimeSpan(+7, 0, 0), "Custom Time Zone", "Custom Time Zone");
         public TaskItem()
         {
             InitializeComponent();
@@ -28,6 +30,19 @@ namespace PBOFinalProject
             placeText.Text = task.Place;
             dateText.Text = task.Date.ToShortDateString();
             timeText.Text = task.Date.ToShortTimeString();
+            warningLabel.Text = ToDoBase.GetWarningLevel(task.Date, toDoTimeZone);
+            if (warningLabel.Text == "Late")
+            {
+                warningLabel.BackColor = Color.Red;
+            }
+            else if(warningLabel.Text == "Urgent")
+            {
+                warningLabel.BackColor = Color.Orange;
+            }
+            else
+            {
+                warningLabel.BackColor= Color.Green;
+            }
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
@@ -49,6 +64,16 @@ namespace PBOFinalProject
             EditPage editPage = new EditPage(task);
             editPage.Show();
             mainPage.Hide();
+        }
+
+        private void timeText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void warningLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

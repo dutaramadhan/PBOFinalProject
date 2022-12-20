@@ -36,7 +36,7 @@ namespace PBOFinalProject
                 MessageBox.Show("Tolong Isi Nama, Tanggal, dan Tempat Kegiatan Terlebih Dahulu");
                 return;
             }
-            else if (dateBox.Value.Date == DateTime.Now || timeBox.Value.TimeOfDay < DateTime.Now.TimeOfDay)
+            else if (dateBox.Value.Date == DateTime.Now.Date && timeBox.Value.TimeOfDay < DateTime.Now.TimeOfDay)
             {
                 MessageBox.Show("Masukan tanggal dan jam yang valid");
             }

@@ -33,24 +33,18 @@ namespace PBOFinalProject
         }
         public void loadData()
         {
+            ActivityListBox.Controls.Clear();
             List<Task> tasks = taskAPI.GetTasks();
             foreach (Task task in tasks)
             {
                 TaskItem taskItem = new TaskItem(task, this);
                 ActivityListBox.Controls.Add(taskItem);
             }
-            ActivityListBox.Controls.Add(new TaskItem());
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
+  
 
         private void AddButton_Click(object sender, EventArgs e)
         {
@@ -65,5 +59,9 @@ namespace PBOFinalProject
            
         }
 
+        private void ActivityListBox_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
