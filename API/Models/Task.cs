@@ -8,7 +8,6 @@ namespace API.Models
         public string Activity { get; set; } = string.Empty;
         public DateTime Date { get; set; }
         public string Place { get; set; } = string.Empty;
-        public DateTime Time { get; set; }
 
         public Task()
         {
