@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PBOFinalProject.UsingAPI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace PBOFinalProject
 {
     public partial class Add : Form
     {
+        static TaskAPI taskAPI = new TaskAPI();
         public Add()
         {
             InitializeComponent();
@@ -48,6 +50,8 @@ namespace PBOFinalProject
                 task.Date = dateBox.Value.Date ;
                 task.Time = timeBox.Value.TimeOfDay;
                 task.Place = PlaceBox.Text;
+                taskAPI.Create(task);
+
                 MessageBox.Show("Data Berhasil Disimpan");
                 MainPage mainPage = new MainPage();
                 mainPage.Show();

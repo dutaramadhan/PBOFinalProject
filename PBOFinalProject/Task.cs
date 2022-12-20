@@ -13,6 +13,7 @@ namespace PBOFinalProject
         private TimeSpan time;
         private string place;
 
+        public int Id { get; set; }
         public string Activity { get => activity; set => activity = value; }
         public DateTime Date { get => date; set => date = value; }
         public string Place { get => place; set => place = value; }
