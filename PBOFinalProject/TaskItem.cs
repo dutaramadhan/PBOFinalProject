@@ -25,7 +25,7 @@ namespace PBOFinalProject
             activityText.Text = task.Activity;
             placeText.Text = task.Place;
             dateText.Text = task.Date.ToShortDateString();
-            timeText.Text = task.Time.ToShortTimeString();
+            timeText.Text = task.Time.ToString();
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)

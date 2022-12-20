@@ -36,18 +36,19 @@ namespace PBOFinalProject
                 MessageBox.Show("Tolong Isi Nama, Tanggal, dan Tempat Kegiatan Terlebih Dahulu");
                 return;
             }
-            else if (dateBox.Value == DateTime.Now || timeBox.Value < DateTime.Now)
+            else if (dateBox.Value.Date == DateTime.Now || timeBox.Value.TimeOfDay < DateTime.Now.TimeOfDay)
             {
                 MessageBox.Show("Masukan tanggal dan jam yang valid");
             }
-            else if (dateBox.Value < DateTime.Now){
+            else if (dateBox.Value.Date < DateTime.Now.Date){
                 MessageBox.Show("Masukan tanggal yang valid");
             }
             else
             {
                 Task task = new Task();
                 task.Activity = ActivityBox.Text;
-                task.Date = dateBox.Value ;
+                task.Date = dateBox.Value.Date ;
+                task.Time = timeBox.Value.TimeOfDay;
                 task.Place = PlaceBox.Text;
                 taskAPI.Create(task);
 
