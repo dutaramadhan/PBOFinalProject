@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PBOFinalProject", "PBOFinal
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{6CC5F3E1-8AE7-47A2-877E-C991E5CEF7F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_Package", "Package\Project_Package.csproj", "{BB1A31CC-A202-4C20-A5E1-3907383D729D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6CC5F3E1-8AE7-47A2-877E-C991E5CEF7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CC5F3E1-8AE7-47A2-877E-C991E5CEF7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CC5F3E1-8AE7-47A2-877E-C991E5CEF7F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB1A31CC-A202-4C20-A5E1-3907383D729D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB1A31CC-A202-4C20-A5E1-3907383D729D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB1A31CC-A202-4C20-A5E1-3907383D729D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB1A31CC-A202-4C20-A5E1-3907383D729D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
