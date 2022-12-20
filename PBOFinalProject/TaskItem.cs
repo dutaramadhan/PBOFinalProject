@@ -46,10 +46,9 @@ namespace PBOFinalProject
 
         private void editBtn_Click(object sender, EventArgs e)
         {
-            EditPage editPage = new EditPage();
-            MainPage mainPage = new MainPage();
+            EditPage editPage = new EditPage(task);
             editPage.Show();
-            this.Hide();
+            mainPage.Hide();
         }
     }
 }
