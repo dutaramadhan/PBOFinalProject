@@ -83,6 +83,12 @@
     <Compile Include="Add.Designer.cs">
       <DependentUpon>Add.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditPage.Designer.cs">
+      <DependentUpon>EditPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Task.cs" />
     <Compile Include="TaskItem.cs">
       <SubType>UserControl</SubType>
@@ -108,6 +114,9 @@
     <Compile Include="UsingAPI\TaskAPI.cs" />
     <EmbeddedResource Include="Add.resx">
       <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditPage.resx">
+      <DependentUpon>EditPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
