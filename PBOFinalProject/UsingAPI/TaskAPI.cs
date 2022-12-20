@@ -17,7 +17,7 @@ namespace PBOFinalProject.UsingAPI
             HttpClientHandler handler = new HttpClientHandler();
             handler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
             client = new HttpClient(handler);
-            client.BaseAddress = new Uri("https://localhost:7235/api/Task");
+            client.BaseAddress = new Uri("https://localhost:7235/api/Task/");
         }
         /// <summary> API Request to get all Tasks </summary>
         /// <returns>All Tasks</returns>
@@ -26,7 +26,6 @@ namespace PBOFinalProject.UsingAPI
             try {
                 var res = client.GetAsync("").Result;
                 var tasks = res.Content.ReadFromJsonAsync<List<Task>>().Result;
-                MessageBox.Show(res.StatusCode.ToString());
                 return tasks;
             } 
             catch (Exception e){
@@ -53,7 +52,7 @@ namespace PBOFinalProject.UsingAPI
         /// <param name="id"></param>
         public void Delete(int id)
         {
-            var res = client.DeleteAsync("/" + id.ToString()).Result;
+            var res = client.DeleteAsync(id.ToString()).Result;
         }
     }
 }
