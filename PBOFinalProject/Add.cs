@@ -48,7 +48,8 @@ namespace PBOFinalProject
                 Task task = new Task();
                 task.Activity = ActivityBox.Text;
                 task.Date = dateBox.Value.Date ;
-                task.Date.Add(timeBox.Value.TimeOfDay);
+                task.Date = task.Date.Add(timeBox.Value.TimeOfDay);
+                MessageBox.Show(timeBox.Value.TimeOfDay + " " + task.Date.ToShortTimeString());
                 task.Place = PlaceBox.Text;
                 taskAPI.Create(task);
 
