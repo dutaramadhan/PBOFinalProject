@@ -35,6 +35,7 @@ namespace PBOFinalProject
                 TaskItem taskItem = new TaskItem(task);
                 ActivityListBox.Controls.Add(taskItem);
             }
+            ActivityListBox.Controls.Add(new TaskItem());
         }
 
         private void button1_Click(object sender, EventArgs e)
