@@ -33,5 +33,13 @@ namespace PBOFinalProject
             taskAPI.Delete(task.Id);
             MessageBox.Show(task.Id.ToString() + "is deleted");
         }
+
+        private void editBtn_Click(object sender, EventArgs e)
+        {
+            EditPage editPage = new EditPage();
+            MainPage mainPage = new MainPage();
+            editPage.Show();
+            this.Hide();
+        }
     }
 }
