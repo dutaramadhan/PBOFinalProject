@@ -29,10 +29,14 @@ namespace PBOFinalProject
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            loadData();
+        }
+        public void loadData()
+        {
             List<Task> tasks = taskAPI.GetTasks();
-            foreach (Task task in tasks) 
+            foreach (Task task in tasks)
             {
-                TaskItem taskItem = new TaskItem(task);
+                TaskItem taskItem = new TaskItem(task, this);
                 ActivityListBox.Controls.Add(taskItem);
             }
             ActivityListBox.Controls.Add(new TaskItem());

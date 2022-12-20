@@ -14,13 +14,15 @@ namespace PBOFinalProject
     public partial class TaskItem : UserControl
     {
         static TaskAPI taskAPI = new TaskAPI();
+        MainPage mainPage;
         Task task;
         public TaskItem()
         {
             InitializeComponent();
         }
-        public TaskItem(Task task): this()
+        public TaskItem(Task task, MainPage mainPage): this()
         {
+            this.mainPage = mainPage;
             this.task = task;
             activityText.Text = task.Activity;
             placeText.Text = task.Place;
@@ -30,8 +32,16 @@ namespace PBOFinalProject
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            taskAPI.Delete(task.Id);
-            MessageBox.Show(task.Id.ToString() + "is deleted");
+            try
+            {
+                taskAPI.Delete(task.Id);
+                MessageBox.Show(task.Id.ToString() + "is deleted");
+                mainPage.loadData();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show(err.Message);
+            }
         }
 
         private void editBtn_Click(object sender, EventArgs e)
