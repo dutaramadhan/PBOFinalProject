@@ -26,9 +26,11 @@ namespace PBOFinalProject.UsingAPI
             try {
                 var res = client.GetAsync("").Result;
                 var tasks = res.Content.ReadFromJsonAsync<List<Task>>().Result;
+                MessageBox.Show(res.StatusCode.ToString());
                 return tasks;
             } 
             catch (Exception e){
+                MessageBox.Show(e.Message);
                 return new List<Task>();
             }
         }
