@@ -10,13 +10,13 @@ namespace PBOFinalProject
     {
         private string activity;
         private DateTime date;
-        private DateTime time;
+        private TimeSpan time;
         private string place;
 
         public string Activity { get => activity; set => activity = value; }
         public DateTime Date { get => date; set => date = value; }
         public string Place { get => place; set => place = value; }
-        public DateTime Time { get => time; set => time = value; }
+        public TimeSpan Time { get => time; set => time = value; }
 
         public Task()
         {
