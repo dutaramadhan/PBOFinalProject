@@ -48,7 +48,7 @@ namespace PBOFinalProject
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            Add newForm = new Add();
+            AddPage newForm = new AddPage();
             newForm.Show();
             this.Hide();
             

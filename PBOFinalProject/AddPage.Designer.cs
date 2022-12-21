@@ -1,6 +1,6 @@
 ﻿namespace PBOFinalProject
 {
-    partial class Add
+    partial class AddPage
     {
         /// <summary>
         /// Required designer variable.

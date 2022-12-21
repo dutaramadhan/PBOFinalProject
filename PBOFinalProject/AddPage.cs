@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace PBOFinalProject
 {
-    public partial class Add : Form
+    public partial class AddPage : Form
     {
         static TaskAPI taskAPI = new TaskAPI();
-        public Add()
+        public AddPage()
         {
             InitializeComponent();
         }
