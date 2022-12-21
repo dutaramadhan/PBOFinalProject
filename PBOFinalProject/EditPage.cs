@@ -42,7 +42,7 @@ namespace PBOFinalProject
                 MessageBox.Show("Tolong Isi Nama, Tanggal, dan Tempat Kegiatan Terlebih Dahulu");
                 return;
             }
-            else if (EditDateBox.Value.Date == DateTime.Now || EditTimeBox.Value.TimeOfDay < DateTime.Now.TimeOfDay)
+            else if (EditDateBox.Value.Date == DateTime.Now.Date && EditTimeBox.Value.TimeOfDay < DateTime.Now.TimeOfDay)
             {
                 MessageBox.Show("Masukan tanggal dan jam yang valid");
             }
