@@ -153,6 +153,7 @@
             this.Controls.Add(this.label1);
             this.Name = "EditPage";
             this.Text = "EditPage";
+            this.Load += new System.EventHandler(this.EditPage_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

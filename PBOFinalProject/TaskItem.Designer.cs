@@ -135,6 +135,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "TaskItem";
             this.Size = new System.Drawing.Size(748, 38);
+            this.Load += new System.EventHandler(this.TaskItem_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

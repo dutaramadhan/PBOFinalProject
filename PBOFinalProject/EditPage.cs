@@ -64,6 +64,11 @@ namespace PBOFinalProject
                 this.Hide();
             }
         }
+
+        private void EditPage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

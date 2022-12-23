@@ -75,5 +75,10 @@ namespace PBOFinalProject
         {
 
         }
+
+        private void TaskItem_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
